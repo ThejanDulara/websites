@@ -1,0 +1,141 @@
+:root {
+  /* Farm Palette */
+  --color-green: #2c5f2d;       /* Deep green: fields & vegetables */
+  --color-green-light: #448046; /* Lighter green for hover/accents */
+  --color-brown: #6b4c3a;       /* Warm brown: soil, wood, farmhouse */
+  --color-cream: #f9f6f0;       /* Cream/off-white: fresh produce, bakery feel */
+  --color-accent: #d96c4b;      /* Soft orange/muted red: tomatoes, apples, baked goods */
+  --color-text: #362e29;        /* Warm very dark brown for text */
+  --color-text-light: #6a5e55;  /* Secondary text color */
+  --color-white: #ffffff;
+  
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-green);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Common Layouts & Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-green);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px; /* Pillow shape for friendly feel */
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(44, 95, 45, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(44, 95, 45, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: #553a29;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-accent:hover {
+  background-color: #c45b3a;
+  transform: translateY(-2px);
+}
