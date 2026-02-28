@@ -250,7 +250,7 @@ function App() {
             </div>
 
             <div className="contact-actions">
-              <a href="tel:1234567890" className="btn btn-primary btn-large">
+              <a href="tel:+1 207-268-4331" className="btn btn-primary btn-large">
                 <PhoneIcon /> &nbsp; Call the Farm
               </a>
               <a href="https://web.facebook.com/SeamansFarm" target="_blank" rel="noreferrer" className="btn btn-secondary btn-large">
