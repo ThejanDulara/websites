@@ -436,7 +436,20 @@
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-    /* simple approach for now, or we can toggle it */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: rgba(249, 246, 240, 0.98);
+    flex-direction: column;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(44, 95, 45, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   .mobile-menu-btn {
@@ -449,13 +462,21 @@
 
   .hero-actions {
     flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
   }
 
-  .btn {
+  .hero-actions .btn {
+    text-align: center;
+    justify-content: center;
     width: 100%;
   }
 
   .visit-grid {
     grid-template-columns: 1fr;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
